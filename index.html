@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Closeness">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body ng-controller="MainCtrl as vm">
+    <div class="container">
+        <div class="box">
+            <div class="question">
+                {{vm.currQuest}}
+            </div>
+            <div class="buttons">
+                <button class="btn" ng-click="vm.changeQuestion(-1)">back</button>
+                <button class="btn" ng-click="vm.changeQuestion(1)">next</button>
+            </div>
+        </div>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>
