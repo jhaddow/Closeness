@@ -7,14 +7,15 @@
         var vm = this;
         vm.changeQuestion = changeQuestion;
         var questions = QuestionService.getQuestions();
-        var currIndex = 0;
-        vm.currQuest = questions[currIndex];
+        vm.currIndex = 0;
+        vm.len = questions.length;
+        vm.currQuest = questions[vm.currIndex];
 
         function changeQuestion(change) {
-            currIndex += change;
-            if (currIndex < 0) currIndex = 0;
-            if (currIndex > questions.length - 1) currIndex = questions.length - 1;
-            vm.currQuest = questions[currIndex];
+            vm.currIndex += change;
+            if (vm.currIndex < 0) vm.currIndex = 0;
+            if (vm.currIndex > vm.len - 1) vm.currIndex = vm.len - 1;
+            vm.currQuest = questions[vm.currIndex];
         }
     }
 })();
